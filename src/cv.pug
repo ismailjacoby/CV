@@ -1,0 +1,157 @@
+doctype html
+html(lang="fr")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title CV
+		style !{CSS}
+		- const age = new Date(new Date()-new Date('1993-10-09')).getFullYear()-1970;
+	body
+		.cv
+			.header
+				.photo
+				.naming
+					.name Ismail Jacoby
+					.poste Développeur Java Angular
+				.links
+					.link.linkedin
+						a(href="https://www.linkedin.com/in/ismailjacoby").
+							https://linkedin.com/in/ismailjacoby
+						svg-container
+							include ./svg/linkedin.svg
+					.link.github
+						a(href="https://github.com/ismailjacoby").
+							https://github.com/ismailjacoby
+						svg-container
+							include ./svg/github.svg
+			.main
+				.left
+					section.contact
+						.title Contact
+						.items
+							svg-container
+								include ./svg/position.svg
+							span B-6750 Musson
+							svg-container
+								include ./svg/phone.svg
+							a(href="tel:+352691123066") +352 691 123 066
+							svg-container
+								include ./svg/mail.svg
+							a(href="mailto:ismail.jacoby@gmail.com").
+								ismail.jacoby@gmail.com
+					section.info
+						.title Autres informations
+						.items
+							svg-container
+								include ./svg/car.svg
+							span Permis B + Voiture
+							svg-container
+								include ./svg/cake.svg
+							span #{age} ans (09/10/1993)
+					section.langues
+						.title Langues
+						.items
+							svg-container
+								include ./svg/flag-fr.svg
+							span Français (Langue maternelle)
+							svg-container.flag
+								include ./svg/flag-lux.svg
+							span Luxembourgeois (Langue maternelle)
+							svg-container
+								include ./svg/flag-gb.svg
+							span Anglais (C2)
+							svg-container.flag
+								include ./svg/flag-de.svg
+							span Allemand (C2)
+
+							
+					section.softskills
+						.title Qualités
+						.items
+							svg-container#rigueur
+								include ./svg/softskills/organised.svg
+							span Organisé
+							svg-container#sisyphe
+								include ./svg/softskills/perseverance.svg
+							span Autonome
+							svg-container
+								include ./svg/softskills/diamond.svg
+							span Créatif
+					section.hobbies
+						.title Centres d'intérêt
+						.items
+							svg-container(style="align-items: flex-start;margin-top: 4px;")
+								include ./svg/softskills/coding.svg
+							span Programmation
+							svg-container
+								include ./svg/softskills/music.svg
+							span Production de musique
+							svg-container
+								include ./svg/softskills/creative.svg
+							span Graphisme
+							svg-container
+								include ./svg/softskills/gym.svg
+							span Fitness
+							
+				.right
+					section.skills
+						.title Compétences
+						.items
+							.skills-category Front-end:
+							.skills-list Angular, HTML, CSS, JS, Typescript, Tailwind
+							.skills-category Back-end:
+							.skills-list Java, Spring, Hibernate, JDBC, Jakarta EE
+							.skills-category Bases de données:
+							.skills-list PostgreSQL, MySql, MongoDB
+							.skills-category Outils:
+							.skills-list Git, Docker, Jira, UML, MS Office
+							.skills-category Design:
+							.skills-list Adobe Creative Suite, Figma, Webflow
+					section.formations
+						.title Formations
+						.experiences
+							.xp
+								.xp-info
+									.xp-title
+										.xp-name Formation - Développeur Java et Angular
+										.xp-place Technobel (Arlon)
+									.xp-date 06/2023 - 03/2024
+								.xp-desc.
+									Formation intensive de 9 mois à plein temps, axée sur l’acquisition de compétences en programmation et en gestion de bases de données.
+									
+									Projets réalisés:
+									1. Amélioration d’un outil de gestion des parcelles
+									2. Gestionnaire de tournois d’échecs
+									3. Création d’un site vitrine pour un studio d’enregistement avec stockage de fichiers sur AW S et processeur de paiement (Stripe)
+							.xp
+								.xp-info
+									.xp-title
+										.xp-name Formation Algorithmes
+										.xp-place Technobel (Arlon)
+									.xp-date 05/2023
+								.xp-desc.
+									Formation dédiée à l’exploration approfondie des fondaments de l’algorithmique indispensables à la programmation. 
+					section.xp-pro
+						.title Expériences professionnelles 
+						.experiences
+							.xp
+								.xp-info
+									.xp-title
+										.xp-name Indépendant
+									.xp-date 12/2019 - Aujourd'hui
+								.xp-desc.
+									Prestations studio d’enregistrement
+									Location de matériel événementiel
+									Prestations DJ
+									Graphisme
+									Développement de sites web
+							.xp
+								.xp-info
+									.xp-title
+										.xp-name Animateur
+										.xp-place Espace S.A (Weiler-la-Tour, Luxembourg)
+									.xp-date 03/2022 - 03/2023
+								.xp-desc.
+									Prestations DJ
+									Responsable de l'équipement audiovisuel
+									Contribution à l'organisation des événements

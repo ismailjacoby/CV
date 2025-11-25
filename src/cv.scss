@@ -1,0 +1,273 @@
+@use "./fonts/fonts.scss";
+@use "./assets/img.scss" as img;
+
+$primary-color: #0098cf;
+$gray-color: #ddd;
+
+:root {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+}
+
+svg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cv {
+  width: 21cm;
+  height: 29.7cm;
+  margin: 0.75cm auto;
+  padding: 0.75cm;
+  background-color: white;
+  box-shadow: 0 0 0.75cm rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: $primary-color;
+  font-size: 5.5mm;
+  margin-bottom: 0.25cm;
+  font-weight: 500;
+}
+
+/*-----------------------------------*/
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75cm;
+  padding-bottom: 0.75cm;
+  border-bottom: 1px solid $gray-color;
+}
+.header .photo {
+  width: 4cm;
+  height: 4cm;
+  border-radius: 5px;
+  background-image: url(img.$photo_png);
+  background-size: cover;
+}
+.header .naming {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25cm;
+  width: fit-content;
+  white-space: nowrap;
+}
+.header .name {
+  font-size: 8mm;
+}
+.header .poste {
+  font-size: 4.5mm;
+  text-transform: uppercase;
+  color: $primary-color;
+}
+.header .links {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25cm;
+  text-align: right;
+  white-space: nowrap;
+  font-size: 3.5mm;
+}
+.header .links .link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header .links a {
+  text-decoration: none;
+  color: inherit;
+}
+.header .links svg {
+  height: 3.5mm;
+  width: fit-content;
+  margin-left: 0.25cm;
+  fill: $primary-color;
+}
+
+/*-----------------------------------*/
+
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid $gray-color;
+  height: 100%;
+  gap: 0.75cm;
+  width: fit-content;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+}
+
+/*-----------------------------------*/
+
+.left section:first-child {
+  padding-top: 1cm;
+}
+.left section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25cm;
+  white-space: nowrap;
+  font-size: 4mm;
+  padding-left: 0.25cm;
+  padding-right: 0.75cm;
+}
+.left section .link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.left section a {
+  text-decoration: none;
+  color: inherit;
+}
+.left section svg {
+  height: 4.5mm;
+  width: fit-content;
+  fill: $primary-color;
+}
+
+.left section .items {
+  display: grid;
+  grid-template-columns: 9mm 1fr;
+  grid-gap: 0.25cm;
+}
+.left section .items span {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+#sisyphe svg {
+  height: 6mm !important;
+}
+#rigueur svg {
+  height: 5mm !important;
+}
+
+.contact .items,
+.info .items {
+  margin-left: -2mm;
+}
+.langues .items,
+.softskills .items,
+.hobbies .items {
+  margin-left: -1mm;
+}
+
+/*-----------------------------------*/
+
+.right section {
+  padding-top: 1cm;
+}
+
+.right section {
+  padding-bottom: 0.75cm;
+  padding-left: 0.75cm;
+  border-bottom: 1px solid $gray-color;
+  font-size: 4mm;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25cm;
+}
+.right section:last-child {
+  border-bottom: inherit;
+}
+
+section.skills .items {
+  display: grid;
+  grid-template-columns: 3.5cm 1fr;
+  grid-gap: 0.25cm;
+}
+section.skills .skills-category {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 500;
+}
+section.skills .skills-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+section.skills svg {
+  height: 16mm;
+  width: fit-content;
+  fill: inherit;
+}
+
+.right .experiences {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375cm;
+}
+.right .experiences .xp {
+  display: flex;
+  flex-direction: column;
+}
+.right .experiences .xp-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.right .experiences .xp-title {
+  display: flex;
+  flex-direction: column;
+}
+.right .experiences .xp-name {
+  font-weight: 500;
+}
+.right .experiences .xp-place {
+  font-weight: 500;
+  font-size: 3.2mm;
+}
+.right .experiences .xp-date {
+  font-weight: 500;
+}
+.right .experiences .xp-desc {
+  margin-top: 0.125cm;
+  white-space: pre-wrap;
+}
+.right .experiences .xp-desc + .xp-desc {
+  margin-top: 0.25cm;
+}
+/*-----------------------------------*/
+
+@media print {
+  body,
+  .cv {
+    background-color: unset;
+  }
+  .cv {
+    box-shadow: unset;
+    padding: unset;
+    margin: unset;
+  }
+  .header,
+  .left,
+  .right section {
+    border-width: 2px;
+  }
+}

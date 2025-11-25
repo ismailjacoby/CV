@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"noEmit": true,
+		"target": "es2022",
+		"allowJs": true,
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext"
+	},
+	"include": [
+		"**/*.d.ts",
+		"src/**/*.ts",
+		"src/**/*.svg"
+	],
+	"exclude": ["node_modules"]
+}
